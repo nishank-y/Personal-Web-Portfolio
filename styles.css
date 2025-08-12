@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a4a);
+    color: white;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(30, 30, 47, 0.9);
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.nav-container {
+    max-width: 1200px; /* keeps it centered on wide screens */
+    margin: 0 auto;
+    padding: 0 40px; /* space on both sides */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /* consistent height */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff8c42;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    scroll-margin-top: 70px; /* so headings are visible under navbar */
+}
+
+#home {
+    min-height: 100vh; /* full height for hero section */
+}
+
+#about, #projects, #contact {
+    min-height: auto; /* shrink based on content */
+}
+
+/* Hero / Home Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin: 0 auto 15px;
+    font-size: 1.1rem;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff8c42;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #ff6a00;
+    transform: scale(1.05);
+}
+
+/* About Section */
+#about {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+    padding: 40px 20px;
+}
+
+#about h2, 
+#about h3 {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.about-list {
+    list-style-type: disc;
+    padding-left: 100px; /* smaller padding since grid is used */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 8px 40px; /* space between rows and columns */
+}
+
+/* Projects Section */
+#projects {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 400px));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    text-align: left;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 0.9rem;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Contact Section */
+#contact {
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.compact-form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.compact-form input, 
+.compact-form textarea {
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 4px;
+    color: white;
+}
+
+.compact-form button {
+    padding: 10px;
+    background: #ff8c42;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.compact-form button:hover {
+    background: #ff6a00;
+}
+
+.success {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: rgba(30, 30, 47, 0.9);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+.down-arrow {
+    display: block;
+    margin-top: 30px;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    animation: bounce 1.5s infinite;
+}
+
+.down-arrow:hover {
+    color: #ff8c42;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(8px);
+    }
+    60% {
+        transform: translateY(4px);
+    }
+}
